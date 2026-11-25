@@ -1,40 +1,98 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.5.1 (Python 3.12.0 on win32)" generated="2026-11-23T03:30:10.892580" rpa="false" schemaversion="5">
-<suite id="s1" name="Testcase1" source="C:\Users\mh742\Desktop\robot\test\testcase1.robot">
-<test id="s1-t1" name="TEST" line="14">
-<kw name="Log" owner="BuiltIn">
-<msg time="2026-11-23T03:30:10.924576" level="INFO">hel am mehedi from khulna lo i</msg>
-<arg>${hello}</arg>
-<doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2026-11-23T03:30:10.924576" elapsed="0.000000"/>
+<robot generator="Robot 7.5.1 (Python 3.12.0 on win32)" generated="2026-11-26T02:36:36.076303" rpa="false" schemaversion="5">
+<suite id="s1" name="Openyoutube" source="C:\Users\mh742\Desktop\robot\test\openyoutube.robot">
+<test id="s1-t1" name="Search On YouTube" line="34">
+<kw name="Open YouTube App" type="SETUP">
+<kw name="Open Application" owner="AppiumLibrary">
+<arg>${REMOTE_URL}</arg>
+<arg>platformName=${PLATFORM_NAME}</arg>
+<arg>automationName=${AUTOMATION_NAME}</arg>
+<arg>deviceName=${DEVICE_NAME}</arg>
+<arg>appPackage=${APP_PACKAGE}</arg>
+<arg>appActivity=${APP_ACTIVITY}</arg>
+<arg>noReset=${True}</arg>
+<doc>Opens a new application to the given Appium server.
+Capabilities of appium server, Android and iOS,
+Please check https://appium.io/docs/en/2.19/guides/caps/
+| *Option*            | *Man.* | *Description*     |
+| remote_url          | Yes    | Appium server url |
+| alias               | No     | alias             |</doc>
+<status status="PASS" start="2026-11-26T02:36:36.425593" elapsed="3.016223"/>
 </kw>
-<kw name="Log" owner="BuiltIn">
-<msg time="2026-11-23T03:30:10.924576" level="INFO">{'name': 'mehedi'}</msg>
-<arg>${hello2}</arg>
-<doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2026-11-23T03:30:10.924576" elapsed="0.001001"/>
+<status status="PASS" start="2026-11-26T02:36:36.425593" elapsed="3.016223"/>
 </kw>
-<kw name="Log" owner="BuiltIn">
-<msg time="2026-11-23T03:30:10.925577" level="INFO">['test']</msg>
-<arg>${list}</arg>
-<doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2026-11-23T03:30:10.925577" elapsed="0.000000"/>
+<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
+<msg time="2026-11-26T02:36:41.587885" level="INFO">criteria is com.google.android.youtube:id/menu_item_1</msg>
+<arg>${SEARCH_BUTTON}</arg>
+<arg>timeout=15s</arg>
+<doc>Waits until the element specified by the ``locator`` is visible.</doc>
+<status status="PASS" start="2026-11-26T02:36:39.441816" elapsed="2.146069"/>
 </kw>
-<tag>hello</tag>
-<status status="PASS" start="2026-11-23T03:30:10.923576" elapsed="0.002001"/>
+<kw name="Click Element" owner="AppiumLibrary">
+<msg time="2026-11-26T02:36:41.587885" level="INFO">Clicking element 'id=com.google.android.youtube:id/menu_item_1'.</msg>
+<msg time="2026-11-26T02:36:43.069664" level="INFO">criteria is com.google.android.youtube:id/menu_item_1</msg>
+<arg>${SEARCH_BUTTON}</arg>
+<doc>Clicks the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-11-26T02:36:41.587885" elapsed="1.481779"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
+<msg time="2026-11-26T02:36:43.098429" level="INFO">criteria is com.google.android.youtube:id/search_edit_text</msg>
+<arg>${SEARCH_BOX}</arg>
+<arg>timeout=15s</arg>
+<doc>Waits until the element specified by the ``locator`` is visible.</doc>
+<status status="PASS" start="2026-11-26T02:36:43.070665" elapsed="0.027764"/>
+</kw>
+<kw name="Input Text" owner="AppiumLibrary">
+<msg time="2026-11-26T02:36:43.099429" level="INFO">Typing text 'HELLO' into text field 'id=com.google.android.youtube:id/search_edit_text'</msg>
+<msg time="2026-11-26T02:36:43.174872" level="INFO">criteria is com.google.android.youtube:id/search_edit_text</msg>
+<arg>${SEARCH_BOX}</arg>
+<arg>HELLO</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-11-26T02:36:43.098429" elapsed="0.076443"/>
+</kw>
+<kw name="Press Keycode" owner="AppiumLibrary">
+<arg>66</arg>
+<doc>Sends a press of ``keycode`` to the device.</doc>
+<status status="PASS" start="2026-11-26T02:36:43.175877" elapsed="0.852577"/>
+</kw>
+<kw name="Execute Script" owner="AppiumLibrary">
+<msg time="2026-11-26T02:36:44.029461" level="INFO">Provided dictionary: {'action': 'search'}</msg>
+<arg>mobile: performEditorAction</arg>
+<arg>action=search</arg>
+<doc>Executes a variety of native, mobile commands that aren't associated
+with a specific endpoint. Check out the appium drivers for more details: https://appium.io/docs/en/2.19/ecosystem/drivers/.</doc>
+<status status="PASS" start="2026-11-26T02:36:44.028454" elapsed="1.080190"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2026-11-26T02:36:50.108906" level="INFO">Slept 5 seconds.</msg>
+<arg>5s</arg>
+<doc>Pauses execution for the given time.</doc>
+<status status="PASS" start="2026-11-26T02:36:45.108644" elapsed="5.000262"/>
+</kw>
+<kw name="Close YouTube App" type="TEARDOWN">
+<kw name="Terminate Application" owner="AppiumLibrary">
+<arg>${APP_PACKAGE}</arg>
+<doc>Terminates the given app on the device.</doc>
+<status status="PASS" start="2026-11-26T02:36:50.108906" elapsed="0.240350"/>
+</kw>
+<kw name="Close Application" owner="AppiumLibrary">
+<doc>Closes the current application and the webdriver session.</doc>
+<status status="PASS" start="2026-11-26T02:36:50.349256" elapsed="0.596963"/>
+</kw>
+<status status="PASS" start="2026-11-26T02:36:50.108906" elapsed="0.837313"/>
+</kw>
+<status status="PASS" start="2026-11-26T02:36:36.424589" elapsed="14.521630"/>
 </test>
-<doc>This is my first test case</doc>
-<status status="PASS" start="2026-11-23T03:30:10.893578" elapsed="0.031999"/>
+<status status="PASS" start="2026-11-26T02:36:36.077303" elapsed="14.870916"/>
 </suite>
 <statistics>
 <total>
 <stat pass="1" fail="0" skip="0">All Tests</stat>
 </total>
 <tag>
-<stat pass="1" fail="0" skip="0">hello</stat>
 </tag>
 <suite>
-<stat name="Testcase1" id="s1" pass="1" fail="0" skip="0">Testcase1</stat>
+<stat name="Openyoutube" id="s1" pass="1" fail="0" skip="0">Openyoutube</stat>
 </suite>
 </statistics>
 <errors>
