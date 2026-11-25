@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.5.1 (Python 3.12.0 on win32)" generated="2026-11-23T03:30:10.892580" rpa="false" schemaversion="5">
+<suite id="s1" name="Testcase1" source="C:\Users\mh742\Desktop\robot\test\testcase1.robot">
+<test id="s1-t1" name="TEST" line="14">
+<kw name="Log" owner="BuiltIn">
+<msg time="2026-11-23T03:30:10.924576" level="INFO">hel am mehedi from khulna lo i</msg>
+<arg>${hello}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2026-11-23T03:30:10.924576" elapsed="0.000000"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2026-11-23T03:30:10.924576" level="INFO">{'name': 'mehedi'}</msg>
+<arg>${hello2}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2026-11-23T03:30:10.924576" elapsed="0.001001"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2026-11-23T03:30:10.925577" level="INFO">['test']</msg>
+<arg>${list}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2026-11-23T03:30:10.925577" elapsed="0.000000"/>
+</kw>
+<tag>hello</tag>
+<status status="PASS" start="2026-11-23T03:30:10.923576" elapsed="0.002001"/>
+</test>
+<doc>This is my first test case</doc>
+<status status="PASS" start="2026-11-23T03:30:10.893578" elapsed="0.031999"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="1" fail="0" skip="0">hello</stat>
+</tag>
+<suite>
+<stat name="Testcase1" id="s1" pass="1" fail="0" skip="0">Testcase1</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
